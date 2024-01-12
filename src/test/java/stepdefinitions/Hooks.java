@@ -2,7 +2,6 @@ package stepdefinitions;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import manager.PageFactoryManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -17,7 +16,6 @@ public class Hooks {
 
     @Before
     public void setUp() {
-//        WebDriverManager.chromedriver().driverVersion("120.0.6099.109").setup();
         chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
